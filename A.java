@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class A {
+public class Map {
 public static void main(String[] args) {
 	ArrayList<String> list1= new ArrayList<>();
 	list1.add("Swati");
@@ -26,3 +26,4 @@ public static void main(String[] args) {
 	}
 }
 }
+
