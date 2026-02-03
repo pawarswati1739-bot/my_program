@@ -1,0 +1,54 @@
+Employee Details   14==1primary ,4 unique ,3 not null
+
+show databases;
+use database bach1299;
+create table EmployeeDetails(emp_id int primary key, name varchar(20) NOT NULL, DOB date NOT NULL, mobNo bigint UNQUE NOT NULL, emailId varchar(30) UNQUE NOT NULL,residentialAddress  varchar(60),permanentAddress    varchar(60),adharNo bigint UNQUE Not Null, Gender varchar(20),EmpDept varchar(30), EmpPosition varchar(40), salary varchar(50) , DOJ date NOT NULL, empQualification varchar(60) NOT NULL ,Expirince varchar(70) );
+ 
+desc EmployeeDetails;
+ Field               Type         Null  Key  Default  Extra 
+
+ emp_id              int          NO    PRI  NULL    auto  
+ name                varchar(20)  NO         NULL    
+ dob                 date         NO          NULL    
+ mobNo               bigint       NO     UNI  NULL    
+ emailId             varchar(30)  NO     UNI   NULL    
+ residentialAddress  varchar(60)  YES          NULL    
+ permanentAddress    varchar(60)  YES          NULL    
+ adharNo             bigint       NO    UNI   NULL    
+ gender              varchar(20)  YES          NULL    
+ empDept             varchar(30)  YES         NULL    
+ empPosition         varchar(40)  YES         NULL   
+ salary              varchar(50)  YES          NULL    
+ DOJ                 date         NO           NULL    
+ experience          varchar(70)  YES          NULL    
+ empQualification   varchar(60)  NO            NULL     
+
+ 
+insert into EmployeeDetails(name,dob,mobNo,emailId,residentialAddress,permanentAddress,adharNo,Gender,EmpDept,empPositon,salary,DOJ,expirince,empQualification)value(1,'swati',2005-09-07,'swati@gmail.com','pune','miraj','female','JAVA devloper','Jr.devloper','5.5LPA',2025-10-09,'BSc.CS','4 month'),(2,'jyoti',2007-02-14,'jyoti@gmail.com','miraj','belanki','female','JAVA devloper','Jr.devloper','5.5LPA',2025-10-09,'BSc.CS','1month'),(3,'shiv',2005-11-01,'shiv@gmail.com','pune','sangli','male','JAVA devloper','Jr.devloper','5.0LPA',2025-10-09,'BSc.CS','0 month');
+
+select*from employeeedetails;
+
+1 swati   2005-09-07  swati@gmail.com  pune   miraj     female  JAVA developer   Jr.devloper   5.5LPA  2025-10-09  BSc.CS   4 month
+2 Jyoti  2007-02-14  jyoti@gmail.com   miraj  belanki   female  JAVA developer    Jr.devloper   5.5LPA   2025-10-09   BSc.CS  1month 
+3 shiv  2007-11-o1  shiv@gmail.com   pune  sangli   male    JAVA developer    Jr.devloper   5.0LPA   2025-10-09   BSc.CS  0month 
+
+
+update employeeedetails set permanentAddress='nashik' where emp_id=2;
+
+2 Jyoti  2007-02-14  jyoti@gmail.com   miraj  nashik  female   JAVA developer    Jr.devloper   5.5LPA   2025-10-09   BSc.CS  1month 
+
+
+delete from employeeedetails WHERE emp_id=3;
+1 swati   2005-09-07  swati@gmail.com  pune   miraj     female  JAVA developer   Jr.devloper   5.5LPA  2025-10-09  BSc.CS   4 month
+2 Jyoti  2007-02-14  jyoti@gmail.com   miraj  belanki   female  JAVA developer    Jr.devloper   5.5LPA   2025-10-09   BSc.CS  1month 
+
+select*from employeeedetails WHERE name LIKE 's%';
+1 swati   2005-09-07  swati@gmail.com  pune   miraj     female  JAVA developer   Jr.devloper   5.5LPA  2025-10-09  BSc.CS   4 month
+
+
+select*from employeeedetails WHERE empDept IN('JAVA devloper');
+1 swati   2005-09-07  swati@gmail.com  pune   miraj     female  JAVA developer   Jr.devloper   5.5LPA  2025-10-09  BSc.CS   4 month
+2 Jyoti  2007-02-14  jyoti@gmail.com   miraj  belanki   female  JAVA developer    Jr.devloper   5.5LPA   2025-10-09   BSc.CS  1month 
+3 shiv  2007-11-o1  shiv@gmail.com   pune  sangli   male    JAVA developer    Jr.devloper   5.0LPA   2025-10-09   BSc.CS  0month 
+
+
