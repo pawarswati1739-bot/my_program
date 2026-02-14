@@ -1,0 +1,68 @@
+MySQL Query
+
+show databases;
+use batch1299;
+create table Student (Id int PRIMARY KEY AUTO INCREMENT, name varchar(20) NOT NULL,address varchar(30),stream varchar(40),marks INT )
+
+insert  into student(name,address,stream,marks)values('swati','pune','BSc.CS',73),('Jyoti','Belanki','BA',74),('Sakshi','Belanki','HSC',75),('Shriraj','Belanki','school',74);
+
+select*from Student;
+Id      name     address     stream       marks
+1       swati     pune       BSc.CS       73
+2       Jyoti     Belanki    BA           74
+3       Sakshi    Belanki    HSC          75
+4       Shriraj   Belanki    school       74
+
+
+update student set address='Salgre' where Id=2; 
+
+Id      name     address     stream       marks
+1       swati     pune       BSc.CS       73
+2       Jyoti     salgre     BA           74
+3       Sakshi    Belanki    HSC          75
+4       Shriraj   Belanki    school       74
+
+
+ALTER TABLE student AUTO_INCREMENT = 101;
+
+Id      name     address     stream       marks
+101      swati     pune       BSc.CS       73
+102       Jyoti     salgre     BA           74
+103       Sakshi    Belanki    HSC          75
+104       Shriraj   Belanki    school       74
+
+select *from student WHERE name like's%';
+Id      name     address     stream       marks
+101      swati     pune       BSc.CS       73
+103      Sakshi    Belanki    HSC          75
+104      Shriraj   Belanki    school       74
+
+select*from student whereaddress('Belanki');
+Id      name     address     stream       marks
+103      Sakshi    Belanki    HSC          75
+104      Shriraj   Belanki    school       74
+
+
+ALTER TABLE student RENAME TO address to city;
+Id      name      city        stream       marks
+1       swati     pune       BSc.CS       73
+2       Jyoti     salgre     BA           74
+3       Sakshi    Belanki    HSC          75
+4       Shriraj   Belanki    school       74
+
+select * from student where Id = 101 AND name'swati';
+Id      name      city        stream       marks
+1       swati     pune       BSc.CS       73
+
+
+delete *from student where  Id=1;
+
+Id      name      city        stream       marks
+1       Jyoti     salgre     BA           74
+2       Sakshi    Belanki    HSC          75
+3       Shriraj   Belanki    school       74
+
+
+exit;
+
+
