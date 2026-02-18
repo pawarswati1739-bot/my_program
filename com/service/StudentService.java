@@ -1,0 +1,26 @@
+package com.service;
+
+import com.Dao.StudentDao;
+
+public class StudentService {
+public void insertData() throws Exception {
+	StudentDao sd= new StudentDao();
+	sd.insertData();
+	
+}
+
+public void updateData() throws Exception {
+	StudentDao sd = new StudentDao();
+	sd.updateData();
+}
+
+public void deleteData() throws Exception {
+	StudentDao sd = new StudentDao();
+	sd.deleteData();
+}
+public void feachAllRecord() throws Exception {
+	StudentDao sd= new StudentDao();
+	sd.fetchAllRecord();
+	
+}
+}
